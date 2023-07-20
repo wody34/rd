@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Redirect Service</title>
-</head>
-<body>
-  <form id="redirectForm" action="javascript:void(0);" onsubmit="redirect()">
-    <input type="text" id="urlSuffix" placeholder="Enter 4 letter word">
-    <input type="submit" value="Go">
-  </form>
-  
-  <script>
-    function redirect() {
-      let suffix = document.getElementById('urlSuffix').value;
-      if(suffix.length !== 4) {
-        alert("Please enter a 4 letter word");
-        return false;
+  <head>
+    <title>Redirect Service</title>
+  </head>
+  <body>
+    <script>
+      const url = "";
+      function redirect() {
+        // let suffix = document.getElementById('urlSuffix').value;
+        // if(suffix.length !== 4) {
+        //   alert("Please enter a 4 letter word");
+        //   return;
+        // }
+        // window.location.href = "https://" + suffix + "-143-248-152-121.ngrok-free.app";
       }
-      window.location.href = "https://" + suffix + "-143-248-152-234.ngrok-free.app";
-      return false;
-    }
-  </script>
-</body>
+      window.onload = () => {
+        window.location.href = url;
+      };
+    </script>
+  </body>
 </html>
